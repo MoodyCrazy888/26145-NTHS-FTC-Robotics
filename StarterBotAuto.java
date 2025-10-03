@@ -367,9 +367,6 @@ public class StarterBotAuto extends OpMode
          * we know our enum isn't reflecting a different state.
          */
 
-
-         //TO IMPLEMENT !!!!!!!!!
-         //Drive to goal BEFORE launch (maybe, testing is)
         switch (autonomousState){
             /*
              * Since the first state of our auto is LAUNCH, this is the first "case" we encounter.
@@ -555,6 +552,7 @@ public class StarterBotAuto extends OpMode
         telemetry.addData("Auto State", autonomousState);
         telemetry.addData("Start Pos", startPos);
         telemetry.addData("Alliance", alliance);
+        telemetry.addData("Loading Zone's Drive state (Debug)", loadingzonedrive);
 
         //Blank line to seperate the two sections
         telemetry.addLine();
@@ -760,3 +758,4 @@ public class StarterBotAuto extends OpMode
         return (driveTimer.seconds() > holdSeconds);
     }
 }
+
