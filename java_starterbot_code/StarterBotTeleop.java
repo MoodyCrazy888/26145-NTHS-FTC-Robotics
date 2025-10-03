@@ -258,6 +258,17 @@ public class StarterBotTeleop extends OpMode {
         telemetry.addData("Minimum Threshold", "%.0f", LAUNCHER_MIN_VELOCITY);
         //Tells the driver if the launcher is ready to shoot
         telemetry.addData("Ready To Shoot", launcher.getVelocity() > LAUNCHER_MIN_VELOCITY ? "✅" : "❌");
+
+        //Blank line to seperate the two sections
+        telemetry.addLine();
+        
+        /* --- CONTROLS SECTION --- */
+        telemetry.addLine("*** Controls ***");
+        telemetry.addLine("Press [Right Bumper] to shoot.");
+        telemetry.addLine("Press [B] to turn off the launcher.");
+        telemetry.addLine("Press [Y] to turn on the launcher without shooting.");
+        telemetry.addLine("Use the left joystick in order to move forward and strafe.");
+        telemetry.addLine("Use the right joystick in order to rotate.");
     }
 
     /*
@@ -311,4 +322,5 @@ public class StarterBotTeleop extends OpMode {
         }
     }
 }
+
 
